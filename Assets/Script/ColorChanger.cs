@@ -9,12 +9,19 @@ public class ColorChanger : MonoBehaviour
     public Color ballColor;
     public MeshRenderer _renderer;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        _renderer = GetComponent<MeshRenderer>();
+    }
+
+    
     void Start()
     {
         Debug.Log("Baþlangýç");
         // transform.position = transform.position + new Vector3(0.5f,0,0);
         //GetComponent<MeshRenderer>().material.color = ballColor;
-        _renderer = GetComponent<MeshRenderer>();
+       
 
     }
 
